@@ -1,0 +1,106 @@
+{
+  "name": "Nexora AI",
+  "version": "1.0.3",
+  "description": "Nexora AI",
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "coin",
+    "promoting",
+    "dapp",
+    "voting",
+    "blockchain",
+    "react",
+    "javascript",
+    "node",
+    "express",
+    "metamask",
+    "ethereum",
+    "bsc",
+    "web3",
+    "firebase"
+  ],
+  "author": "drop5",
+  "dependencies": {
+     "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.10.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@material-ui/core": "^4.12.4",
+    "@metamask/detect-provider": "^1.2.0",
+    "@mui/material": "^5.10.9",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "ethers": "^5.4.6",
+    "firebase": "^8.3.1",
+    "moment": "^2.29.4",
+    "mui-datatables": "^3.8.2",
+    "react": "^17.0.2",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^17.0.2",
+    "react-notifications": "^1.7.2",
+    "react-pancakeswap-token-price": "^1.1.1",
+    "react-router-dom": "^6.0.0",
+    "react-scripts": "^4.0.3",
+    "sass": "^1.43.4",
+    "semver": "^7.7.1",
+    "validator.js": "^2.0.4",
+    "web-vitals": "^1.0.1",
+    "web3": "^1.6.0",
+    "concurrently": "^9.0.0"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run frontend\"",
+    "frontend": "react-scripts --openssl-legacy-provider start",
+    "server": "node app/index.js",
+    "build": "node ./scripts/start-dev.js build",
+    "server": "node app/index.js",
+    "app:pre": "node app/index.js",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test",
+    "compile": "npx hardhat compile",
+    "test:contracts": "npx hardhat test",
+    "deploy:local": "npx hardhat run scripts/deploy.js --network hardhat",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network mainnet",
+    "sync-abi": "node scripts/sync-abi.js",
+    "build:contracts": "npx hardhat compile && node scripts/sync-abi.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.19.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/contracts": "^5.4.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "chai": "^4.3.0",
+    "ethereum-waffle": "^4.0.10",
+    "hardhat": "^2.22.0"
+  }
+}
